@@ -19,4 +19,10 @@
     <string name="on_going_all_out_txt">ON GOING ALL OUT</string>
     <string name="on_going_all_out_desc">ON GOING ALL OUT</string>
     <string name="paragraph_txt">Find a team in your city and dominate the league</string>
+    <string name="i_am_a_txt">I am a...</string>
+    <string name="i_am_a_desc">I am a</string>
+    <string name="novice_txt">Novice</string>
+    <string name="expert_txt">Expert</string>
+    <string name="intermediate_txt">Intermediate</string>
+    <string name="finish_txt">Finish</string>
 </resources>
