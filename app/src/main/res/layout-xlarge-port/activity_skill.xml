@@ -56,13 +56,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ToggleButton
-            android:id="@+id/toggleButton4"
+            android:id="@+id/noviceSkillsBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onNoviceClicked"
             android:text="@string/novice_txt"
             android:textAlignment="center"
             android:textColor="@android:color/white"
@@ -70,7 +71,7 @@
             android:textOn="@string/novice_txt" />
 
         <ToggleButton
-            android:id="@+id/toggleButton5"
+            android:id="@+id/intermediateSkillsBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -79,6 +80,7 @@
             android:background="@drawable/swoosh_toggle"
             android:contentDescription="@string/intermediate_txt"
             android:fontFamily="@font/montserrat"
+            android:onClick="onIntermediateClicked"
             android:text="@string/intermediate_txt"
             android:textAlignment="center"
             android:textColor="@android:color/white"
@@ -86,7 +88,7 @@
             android:textOn="@string/intermediate_txt" />
 
         <ToggleButton
-            android:id="@+id/toggleButton6"
+            android:id="@+id/expertSkillsBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -94,6 +96,7 @@
             android:background="@drawable/swoosh_toggle"
             android:contentDescription="@string/expert_txt"
             android:fontFamily="@font/montserrat"
+            android:onClick="onExpertClicked"
             android:text="@string/expert_txt"
             android:textAlignment="center"
             android:textColor="@android:color/white"
