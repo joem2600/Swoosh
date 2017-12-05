@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="me.joemacdonald.swoosh.SkillActivity">
+    tools:context="me.joemacdonald.swoosh.controller.SkillActivity">
 
     <ImageView
         android:id="@+id/imageView17"
@@ -105,13 +105,14 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/finishSkillBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:background="@drawable/swoosh_button"
         android:contentDescription="@string/finish_txt"
         android:fontFamily="@font/montserrat"
+        android:onClick="onSkillFinishClicked"
         android:text="@string/finish_txt"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,10 +1,12 @@
-package me.joemacdonald.swoosh
+package me.joemacdonald.swoosh.controller
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_league.*
+import me.joemacdonald.swoosh.Utilities.EXTRA_LEAGUE
+import me.joemacdonald.swoosh.R
 
 class LeagueActivity : BaseActivity() {
 

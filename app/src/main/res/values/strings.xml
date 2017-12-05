@@ -25,4 +25,5 @@
     <string name="expert_txt">Expert</string>
     <string name="intermediate_txt">Intermediate</string>
     <string name="finish_txt">Finish</string>
+    <string name="search_league_txt">Looking for a co-ed beginner league near you...</string>
 </resources>

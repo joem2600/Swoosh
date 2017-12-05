@@ -1,4 +1,4 @@
-package me.joemacdonald.swoosh
+package me.joemacdonald.swoosh.controller
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
