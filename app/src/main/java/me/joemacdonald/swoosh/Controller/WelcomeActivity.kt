@@ -1,4 +1,4 @@
-package me.joemacdonald.swoosh.controller
+package me.joemacdonald.swoosh.Controller
 
 import android.content.Intent
 import android.os.Bundle

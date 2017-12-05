@@ -1,4 +1,4 @@
-package me.joemacdonald.swoosh.controller
+package me.joemacdonald.swoosh.Controller
 
 
 import android.content.Intent
@@ -6,21 +6,20 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_skill.*
-import me.joemacdonald.swoosh.Utilities.EXTRA_LEAGUE
 import me.joemacdonald.swoosh.R
-import me.joemacdonald.swoosh.Utilities.EXTRA_SKILL
+import me.joemacdonald.swoosh.Model.Player
+import me.joemacdonald.swoosh.Utilities.EXTRA_PLAYER
+
 
 class SkillActivity : BaseActivity() {
 
-    var league = ""
-    var skill = ""
+    lateinit var player : Player
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
 
-        league = intent.getStringExtra(EXTRA_LEAGUE)
-
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
 
     }
 
@@ -29,7 +28,7 @@ class SkillActivity : BaseActivity() {
         intermediateSkillsBtn.isChecked = false
         expertSkillsBtn.isChecked = false
 
-        skill = "novice"
+        player.skill = "novice"
     }
 
     fun onIntermediateClicked(view: View) {
@@ -37,7 +36,7 @@ class SkillActivity : BaseActivity() {
         noviceSkillsBtn.isChecked = false
         expertSkillsBtn.isChecked = false
 
-        skill = "intermediate"
+        player.skill = "intermediate"
     }
 
     fun onExpertClicked(view: View) {
@@ -45,16 +44,15 @@ class SkillActivity : BaseActivity() {
         noviceSkillsBtn.isChecked = false
         intermediateSkillsBtn.isChecked = false
 
-        skill = "expert"
+        player.skill = "expert"
     }
 
     fun onSkillFinishClicked(view: View) {
 
-        if (skill != "")
+        if (player.skill != "")
         {
             val finishActivity = Intent(this, FinishActivity::class.java)
-            finishActivity.putExtra(EXTRA_LEAGUE, league)
-            finishActivity.putExtra(EXTRA_SKILL, skill)
+            finishActivity.putExtra(EXTRA_PLAYER, player)
             startActivity(finishActivity)
         }
         else
