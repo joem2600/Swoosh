@@ -3,6 +3,7 @@ package me.joemacdonald.swoosh.Controller
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_skill.*
@@ -23,6 +24,20 @@ class SkillActivity : BaseActivity() {
 
     }
 
+    override fun onSaveInstanceState(outState: Bundle?, outPersistentState: PersistableBundle?) {
+        super.onSaveInstanceState(outState, outPersistentState)
+
+        outState?.putParcelable(EXTRA_PLAYER, player)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        if (savedInstanceState != null) {
+
+            player = savedInstanceState.getParcelable(EXTRA_PLAYER)
+        }
+    }
     fun onNoviceClicked(view: View) {
 
         intermediateSkillsBtn.isChecked = false
